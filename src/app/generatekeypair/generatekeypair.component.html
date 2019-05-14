@@ -1,0 +1,50 @@
+<div class="container ">
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+    <div class="form-group row">
+      <H1>GENERATE KEYPAIR</H1>
+    </div>
+    <form (ngSubmit)="onSubmit()" ngNativeValidate>
+  
+      <div class="row">
+        <div class="field-label col-md-6 mx-auto">
+          <label for="USER" class="text-muted">USER</label>
+          <input type="text" class="form-control " [(ngModel)]="model.USER" id="USER" name="USER" required>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="field-label col-md-6 mx-auto">
+          <label for="Name" class="text-muted">COMPANY NAME</label>
+          <input type="text" class="form-control border-bottom" required [(ngModel)]="model.Name" id="Name" name="Name">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field-label col-md-6 mx-auto">
+         
+        </div>
+  
+        
+  
+      </div>
+      <br>
+  
+  <!-- ----------------------------------SUBMIT-------------------------------------- -->
+      <div class="row">
+        <div class="center">
+          <button type="submit" class="w3-btn w3-grey w3-border w3-border-green w3-text-white w3-round-xlarge" style="text-shadow:1px 1px 0 #444">SUBMIT</button>
+        </div>
+      </div>
+  <!-- ------------------------------------------------------------------------------ -->
+  
+  
+      <div class="row" id='statusfield' style='display:none;'>
+        <div class="field-label col-md-12 mx-auto">
+          <label for="status" class="text-muted">Status</label>
+          <textarea style="border: none; background-color: white" class="form-control border-bottom" readonly id="status" name="status"></textarea>
+        </div>
+      </div>
+  
+  
+    </form>
+  </div>
