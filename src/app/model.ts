@@ -29,14 +29,14 @@ export class Generatekeypair {
   static sampleSubmitSr(): Generatekeypair {
     const sample: Generatekeypair = Generatekeypair.empty();
     
-    sample.USER = 'admin';
     sample.Name = 'lotus';
+    sample.STATUS = 'company';
 
     return sample;
   }
 
   constructor (
-      public USER: string,
+      public STATUS: string,
       public Name: string,
     
   ) {}
@@ -46,21 +46,19 @@ export class Generatekeypair {
 //  ---------------------------------------------- Check keypair ------------------------------------------------
 export class InquireKey {
   static empty(): InquireKey {
-    const emptyObj =  empty(InquireKey, 2);
+    const emptyObj =  empty(InquireKey, 1);
     return emptyObj;
   }
 
   static sampleSubmitSr(): InquireKey {
     const sample: InquireKey = InquireKey.empty();
  
-    sample.USER = 'admin';
     sample.ID = 'lotus';
 
     return sample;
   }
 
   constructor (
-      public USER: string,
       public ID: string,
   ) {}
 }

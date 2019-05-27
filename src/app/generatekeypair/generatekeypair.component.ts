@@ -23,7 +23,7 @@ export class GeneratekeypairComponent implements OnInit {
   }
   
   onSubmit() {
-    this.model.USER=this.model.USER.trim();
+    this.model.STATUS=this.model.STATUS.trim();
     this.model.Name=this.model.Name.trim();
     
     
